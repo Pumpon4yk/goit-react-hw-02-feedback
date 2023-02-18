@@ -11,6 +11,7 @@ padding: 5px 10px;
 background-color: white;
 border: 1px solid tomato;
 border-radius: 5px;
+text-transform: capitalize;
 
 :hover{
     background-color: #3399ff;

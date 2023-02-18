@@ -10,7 +10,7 @@ const FeedbackOptions = ({options, onLeaveFeedback}) => {
                             value={e}
                             onClick={onLeaveFeedback}
                         >
-                            {e.charAt(0).toUpperCase() + e.slice(1)}
+                            {e}
                         </Button>
                     ))}
         </ContainerBtn>
