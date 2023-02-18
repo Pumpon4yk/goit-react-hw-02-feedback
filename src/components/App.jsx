@@ -12,8 +12,6 @@ export class App extends Component {
         bad: 0,
     };
 
-    OPT = ['Good', 'Neutral', 'Bad'];
-
     onClickBtn = e => {
         const value = e.target.value;
         this.setState(prevState => {
@@ -38,6 +36,7 @@ export class App extends Component {
         const total = this.countTotalFeedback();
         const countPercent = this.countPositiveFeedbackPercentage();
         const { good, neutral, bad } = this.state;
+        const options = Object.keys(this.state)
 
         return (
             <Container>
@@ -45,7 +44,7 @@ export class App extends Component {
                     title="Please leave feedback"
                     children={
                         <FeedbackOptions
-                            options={this.OPT}
+                            options={options}
                             onLeaveFeedback={this.onClickBtn}
                         />
                     }

@@ -7,10 +7,10 @@ const FeedbackOptions = ({options, onLeaveFeedback}) => {
             {options.map((e, ind) => (
                         <Button
                             key={ind}
-                            value={e.toLowerCase()}
+                            value={e}
                             onClick={onLeaveFeedback}
                         >
-                            {e}
+                            {e.charAt(0).toUpperCase() + e.slice(1)}
                         </Button>
                     ))}
         </ContainerBtn>
@@ -19,7 +19,7 @@ const FeedbackOptions = ({options, onLeaveFeedback}) => {
 
 FeedbackOptions.propTypes ={
     options: PropTypes.array.isRequired,
-    onLeaveFeedback: PropTypes.func.isRequired
+    onLeaveFeedback: PropTypes.func.isRequired,
 }
 
 export default FeedbackOptions;
